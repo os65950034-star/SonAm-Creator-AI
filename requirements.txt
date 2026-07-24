@@ -1,3 +1,11 @@
 openai
 python-dotenv
 requests
+
+edge-tts
+moviepy
+pillow
+imageio
+imageio-ffmpeg
+proglog
+numpy
