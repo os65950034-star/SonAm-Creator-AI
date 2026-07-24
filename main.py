@@ -1,3 +1,9 @@
+import edge_tts
+import moviepy
+import imageio
+import imageio_ffmpeg
+import PIL
+import proglog
 from config.settings import Settings
 from agents.voice_generator import VoiceGenerator
 from agents.video_editor import VideoEditor
