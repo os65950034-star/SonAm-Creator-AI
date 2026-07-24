@@ -16,9 +16,18 @@ class VoiceGenerator:
                 text=script,
                 voice="en-US-GuyNeural"
             )
-
             await communicate.save("output/voice.mp3")
 
-        asyncio.run(create_voice())
+        try:
+            asyncio.run(create_voice())
 
-        print("Voice Generated Successfully.")
+            if os.path.exists("output/voice.mp3"):
+                print("[✓] Voice Generated Successfully.")
+            else:
+                raise Exception("voice.mp3 was not created.")
+
+        except Exception as e:
+            print("\nVOICE GENERATOR ERROR:")
+            print(e)
+            input("\nPress Enter to Exit...")
+            raise
